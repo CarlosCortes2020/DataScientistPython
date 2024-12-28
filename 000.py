@@ -5,6 +5,9 @@ def show_message():
     messagebox.showinfo("Message", "HOLAAAA")
 
 root = tk.Tk()
-root.withdraw()  # Hide the root window
-show_message()
+root.deiconify()  # Make the root window visible
+
+button = tk.Button(root, text="Show Message", command=show_message)
+button.pack(pady=20)
+
 root.mainloop()
